@@ -78,7 +78,7 @@ export const deleteCourse = TryCatch(async (req, res) => {
   );
 
   rm(course.image, () => {
-    console.log("image deleted");
+    console.log("image deleted already");
   });
 
   await Lecture.find({ course: req.params.id }).deleteMany();
